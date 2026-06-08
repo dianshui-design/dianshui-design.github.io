@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三点水 | UI/UX 设计师</title>
+    <meta name="description" content="三点水的专业作品集，专注于企业级产品与交互设计的 UI/UX 设计师。">
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --bg-primary: #faf8f5;
+            --bg-secondary: #f3f0ea;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --accent: #8b2b2b;
+        }
+    }
+    @layer base {
+        body {
+            @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased font-sans selection:bg-gray-200;
+        }
+    }
+    @layer utilities {
+        .font-handwriting {
+            font-family: 'Dancing Script', cursive;
+        }
+        .font-serif {
+            font-family: 'Noto Serif SC', serif;
+        }
+    }
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-[var(--text-primary)] text-white rounded-full font-medium hover:bg-gray-800 transition-colors duration-300;
+        }
+        .btn-secondary {
+            @apply px-6 py-3 bg-[var(--bg-secondary)] text-[var(--text-primary)] rounded-full font-medium hover:bg-gray-200 transition-colors duration-300;
+        }
+        .section-padding {
+            @apply py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/feishuApi.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="components/ProjectImage.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
